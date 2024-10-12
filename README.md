@@ -1,5 +1,7 @@
 # goit-rdb-hw-04
 
+# task number 1
+
 CREATE DATABASE LibraryManagement;
 
 USE LibraryManagement;
@@ -40,6 +42,13 @@ CREATE TABLE borrowed_books (
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
+# task number 2
+
+SELECT * FROM librarymanagement.authors;
+SELECT * FROM librarymanagement.books;
+SELECT * FROM librarymanagement.borrowed_books;
+SELECT * FROM librarymanagement.genres;
+SELECT * FROM librarymanagement.users;
 
 # task number 3
 
@@ -71,7 +80,6 @@ INNER JOIN
     shippers ON orders_2.shipper_id = shippers.id
 INNER JOIN 
     suppliers ON products_2.supplier_id = suppliers.id;
-
 
 # task number 4
 
