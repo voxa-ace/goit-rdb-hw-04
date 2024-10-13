@@ -44,11 +44,30 @@ CREATE TABLE borrowed_books (
 
 # task number 2
 
-SELECT * FROM librarymanagement.authors;
-SELECT * FROM librarymanagement.books;
-SELECT * FROM librarymanagement.borrowed_books;
-SELECT * FROM librarymanagement.genres;
-SELECT * FROM librarymanagement.users;
+INSERT INTO authors (author_id, author_name) 
+VALUES 
+(1, 'J.K. Rowling'),
+(2, 'Mark Twain');
+
+INSERT INTO books (book_id, title, publication_year, author_id, genre_id) 
+VALUES 
+(11, 'Harry Potter and the Philosopher''s Stone', 1997, 1, 1),
+(12, 'The Adventures of Tom Sawyer', 1876, 2, 2);
+
+INSERT INTO borrowed_books (borrow_id, book_id, user_id, borrow_date, return_date) 
+VALUES 
+(1, 11, 1, '2024-10-01', '2024-10-15'),
+(2, 12, 2, '2024-09-20', '2024-10-05');
+
+INSERT INTO genres (genre_id, genre_name) 
+VALUES 
+(1, 'Fantasy'),
+(2, 'Adventure');
+
+INSERT INTO users (user_id, username, email) 
+VALUES 
+(1, 'alex_smith', 'alex@fake.com'),
+(2, 'emma_brown', 'emma@fake.com');
 
 # task number 3
 
